@@ -1,0 +1,31 @@
+body{
+    background: #ffffff;
+  }
+  
+  #frame{
+    width: 70%;
+    padding: 10px 0;
+    border: 1px solid #333;
+    border-radius: 0.75em / 0.75em;
+    margin: 0 auto;
+    background: #caeeda;
+    color: rgb(51, 51, 51);
+  }
+  
+  .board-list{
+    margin: 15px 0;
+  }
+  
+  .board-list__upper{
+    font-weight: 600;
+  }
+  
+  .form-area, .board-title{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+    .kyouchou{
+        color: rgb(255, 20, 20);
+        font-weight: bold;;
+    }
