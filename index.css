@@ -1,0 +1,92 @@
+body{
+    background: #ffffff;
+  }
+  
+  #frame{
+    width: 70%;
+    padding: 0.5em 0.5em 1;
+    border: 0px solid #333;
+    border-radius: 0.75em / 0.75em;
+    margin: 0 auto 0.25% 1%;
+    background: rgb(216, 216, 216);
+    color: rgb(146, 146, 146);
+  }
+  
+  .board-list{
+    margin: 15px 0;
+  }
+  
+  .board-list__upper{
+    font-weight: 600;
+  }
+  
+  .form-area, .board-title{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+    .kyouchou{
+        color: rgb(255, 20, 20);
+        font-weight: bold;;
+    }
+
+/* Prevent browser/OS dark mode from forcing table background to black
+   We force a light background and readable text color for the app's tables.
+   Use !important to override user-agent styles applied in some browsers. */
+.lists, .lists th, .lists td {
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(34, 34, 34) !important;
+}
+
+/* Explicit striped rows to preserve Bulma's is-striped look and override UA dark-mode */
+.lists thead tr {
+  background-color: rgb(241, 245, 248) !important;
+}
+.lists tbody tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255) !important; /* white */
+}
+.lists tbody tr:nth-child(even) {
+  background-color: rgb(246, 248, 250) !important; /* very light gray stripe */
+}
+
+/* Make table layout consistent */
+.lists th, .lists td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: middle;
+}
+
+/* Stronger overrides to restore striping and remove black borders/shadows on mobile */
+.lists {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  color-scheme: light !important; /* hint browsers to avoid forcing dark UA styling */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Apply stripe backgrounds on td directly (safer against UA table overrides) */
+.lists tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+.lists tbody tr:nth-child(even) td {
+  background-color: #f6f8fa !important;
+}
+
+/* Light separators instead of black lines */
+.lists th, .lists td {
+  border-bottom: 1px solid rgb(230, 238, 246) !important;
+}
+.lists thead th {
+  border-bottom: 2px solid rgb(209, 223, 232) !important;
+}
+
+/* Remove any UA-applied box shadow or forced outlines */
+.lists, .lists th, .lists td, .lists tbody tr {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Make sure text color stays readable on mobile forced dark modes */
+.lists, .lists th, .lists td {
+  color: #222222 !important;
+  -webkit-text-fill-color: #222222 !important;
+}
