@@ -262,7 +262,7 @@
     </head>
     <body>
         <div id="board">
-            <section class="hero" style="margin: 0; padding: 0; background-color: rgb(216, 216, 216);">
+            <section class="hero" style="margin: 0; padding: 0; background-color: rgb(216, 216, 216); color: rgb(43, 43, 43);">
                 <div class="hero-body is-small" style="padding: 1rem">
                     <h1 class="board-title is-size-4 has-text-weight-bold">部品在庫管理</h1>
                 </div>
@@ -272,7 +272,7 @@
             <div v-if="authResolved && user">
                 <p>ログイン中: {{ user.email }}</p>
                 <p>ユーザー名: {{ user.displayName }}</p>
-                <details id="frame" style="padding: 0.25rem 0.4rem;">
+                <details id="frame" style="padding: 0.25rem 0.4rem; color: rgb(43, 43, 43);">
                     <summary class="is-size-6" style="font-weight: bold;">トラブル情報</summary>
                     <p class="is-size-6">・今んとこない</p>
                 </details>
@@ -280,10 +280,9 @@
                     <!-- <board-list v-for="(list, key) in lists" :key="key" :name="list.name" :message="list.message" :date="list.date" :amount="list.amount"></board-list> -->
                 <!-- </ul> -->
                 <div style="width:90%; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:8px;">
-                    <div></div>
                     <div style="display:flex; gap:8px;">
                         <button class="button is-warning" v-on:click="editSelected">編集</button>
-                        <button class="button is-danger" v-on:click="deleteSelected">選択削除</button>
+                        <button class="button is-danger" v-on:click="deleteSelected">削除</button>
                     </div>
                 </div>
                 <table class="lists table is-striped is-fullwidth" style="width:90%; margin:0 auto;">
